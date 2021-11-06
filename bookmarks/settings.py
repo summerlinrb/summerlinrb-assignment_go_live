@@ -31,7 +31,7 @@ SECRET_KEY = '%f30pebx%$_0f1n7(5(6-#vmblfo3@4lu&z+y*thz=@_vn%oar' #os.getenv('SE
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['assignment-go-live.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -129,13 +129,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_ROOT = [
-    os.path.join(BASE_DIR , 'staticfiles')
-]
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , 'account/static/')
-]
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR , 'account/static/')]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 

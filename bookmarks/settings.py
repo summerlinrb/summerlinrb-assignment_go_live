@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,24 +86,24 @@ WSGI_APPLICATION = 'bookmarks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd3aae2o2jn98os',
-        'HOST': 'ec2-35-174-52-65.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'dfqnjlbugvseup',
-        'PASSWORD': 'd0535209f3513144477645ca35882374a5a487867337e32b42a9d8abfd2a2003'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd3aae2o2jn98os',
+#         'HOST': 'ec2-35-174-52-65.compute-1.amazonaws.com',
+#         'PORT': 5432,
+#         'USER': 'dfqnjlbugvseup',
+#         'PASSWORD': 'd0535209f3513144477645ca35882374a5a487867337e32b42a9d8abfd2a2003'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -140,10 +141,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
 STATIC_URL = '/static/'
-
-
 STATICFILES_DIRS = [os.path.join(BASE_DIR , 'account/static/')]
 
 MEDIA_URL = '/media/'

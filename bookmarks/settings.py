@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '%f30pebx%$_0f1n7(5(6-#vmblfo3@4lu&z+y*thz=@_vn%oar' #os.getenv('SECRET_KEY') 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['going-live-assignment.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -86,24 +86,24 @@ WSGI_APPLICATION = 'bookmarks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd3aae2o2jn98os',
-#         'HOST': 'ec2-35-174-52-65.compute-1.amazonaws.com',
-#         'PORT': 5432,
-#         'USER': 'dfqnjlbugvseup',
-#         'PASSWORD': 'd0535209f3513144477645ca35882374a5a487867337e32b42a9d8abfd2a2003'
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3rs2c1brl6kv7',
+        'HOST': 'ec2-52-86-223-172.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'vdomajjekxnskm',
+        'PASSWORD': '48f755fe07218c63f96f490c37b82e3c423e7c24f3605354b487871c796ae368'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

@@ -35,6 +35,9 @@
     <span class="logo">Bookmarks</span>
     {% if request.user.is_authenticated %}
     <ul class="menu">
+      <li {% if "section==home" %}class="selected" {% endif %}>
+        <a href="{% url 'home' %}">Home</a>
+      </li>
       <li {% if "section==dashboard" %}class="selected" {% endif %}>
         <a href="{% url 'dashboard' %}">My dashboard</a>
       </li>

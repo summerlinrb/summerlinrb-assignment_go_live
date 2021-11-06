@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '%f30pebx%$_0f1n7(5(6-#vmblfo3@4lu&z+y*thz=@_vn%oar' #os.getenv('SECRET_KEY') 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'social_django',
     'django_extensions',
     'easy_thumbnails',
+    'home.apps.HomeConfig',
     'images.apps.ImagesConfig',
     'actions.apps.ActionsConfig',
 ]
@@ -129,7 +130,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR , 'account/static/')
+]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
@@ -158,9 +161,9 @@ SOCIAL_AUTH_TWITTER_KEY = ''  # Twitter API Key
 SOCIAL_AUTH_TWITTER_SECRET = ''  # Twitter API Secret
 
 # google keys
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('434803969159-hdonuo1jfc6oprb9t9cq7i60o9abubt8.apps.googleusercontent.com')
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv(
-    'SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+    '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')
 
 #easy thumbnails
 # THUMBNAIL_DEBUG = True

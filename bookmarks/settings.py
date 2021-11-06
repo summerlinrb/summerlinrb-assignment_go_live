@@ -29,9 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '%f30pebx%$_0f1n7(5(6-#vmblfo3@4lu&z+y*thz=@_vn%oar' #os.getenv('SECRET_KEY') 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['assignment-go-live.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['going-live-assignment.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
